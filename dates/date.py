@@ -135,8 +135,8 @@ class Date:
         """
         Computes the absolute number of days between two Date objects.
 
-        :param other: The other Dat object.
-        :return: Absolute number of days between Dat objects.
+        :param other: The other Date object.
+        :return: Absolute number of days between Date objects.
         """
         ord_1 = self.diff_from_time_origin_as_days()
         ord_2 = other.diff_from_time_origin_as_days()

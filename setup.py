@@ -7,7 +7,7 @@ INSTALL_REQUIRES = ["pytest", "pre-commit"]
 setup(
     name=PACKAGE_NAME,
     version="0.1",
-    description="Computing the number of days between two dates using Python builtins.",
+    description="Computing the absolute number of days between two dates using Python builtins.",
     author="Louis Quinn",
     author_email="louisquinn@gmail.com",
     url="https://github.com/louisquinn/dates",

@@ -1,5 +1,5 @@
 # dates
-Computing the number of days between two dates using Python builtins.
+Computing the absolute number of days between two dates using Python builtins.
 
 # Installation
 
