@@ -12,18 +12,30 @@ from dates.utils import (
 
 
 class ValidYearException(Exception):
+    """
+    Exception for invalid year.
+    """
+
     def __init__(self, month: int):
         message = f"Invalid year: '{month}'. Must be a value greater than 0000."
         super(ValidYearException, self).__init__(message)
 
 
 class ValidMonthException(Exception):
+    """
+    Exception for invalid month.
+    """
+
     def __init__(self, month: int):
         message = f"Invalid month: '{month}'. Must be a value 1 <= month <= 12."
         super(ValidMonthException, self).__init__(message)
 
 
 class ValidDayInMonthException(Exception):
+    """
+    Exception for invalid day int for a particular month and year.
+    """
+
     def __init__(self, year: int, month: int, day: int, valid_days: int, leap_year: bool):
         leap_month = month == LEAP_YR_MONTH
 
@@ -43,9 +55,19 @@ class ValidDayInMonthException(Exception):
 
 
 class Date:
+    """
+    Date module. Stores a date's year, month and day and can compute the absolute number of days between
+    two Date modules.
+    """
+
     VALID_DATE_PATTERN = r"^(\d{4})-(\d{2})-(\d{2})$"
 
     def __init__(self, date: str):
+        """
+        Initializes a Date module with a date string.
+
+        :param date: A date string in the format: 'YYYY-MM-DD'.
+        """
         self.date = date
 
         self.year, self.month, self.day = self._compile()
@@ -54,6 +76,11 @@ class Date:
         self._assert_validity()
 
     def _compile(self) -> Tuple[int, int, int]:
+        """
+        Compile a date string into year, month and day integers.
+
+        :return: Tuple of ints representing (year, month, day)
+        """
         pattern = re.compile(self.VALID_DATE_PATTERN)
         result = pattern.match(self.date)
 

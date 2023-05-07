@@ -22,6 +22,13 @@ def is_leap_year(year: int) -> bool:
 
 
 def days_in_month(year: int, month: int) -> int:
+    """
+    Gets the max number of days for a given month in a given year.
+
+    :param year: Year int
+    :param month: Month int
+    :return: Max days for the month
+    """
     if is_leap_year(year) and month == LEAP_YR_MONTH:
         return DAYS_IN_MONTH[LEAP_YR_MONTH] + 1
 
