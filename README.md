@@ -43,6 +43,19 @@ python dates/main.py 2021-12-01 2017-12-14
 # prints: The number of days between: '2021-12-01' and '2017-12-14' is 1447 days.
 ```
 
+Some invalid requests:
+
+```shell
+# Raises:
+# AssertionError: Invalid date format: 01-01-2020. Expected: 'YYYY-MM-DD'.
+dates 01-01-2020 2020-01-01
+
+# Raises:
+# ValueError: Invalid day '29' for month: '2'.
+# dates.date.ValidDayInMonthException: Invalid day: '29' for month: '2'. The maximum days is '28'. The year '2022' is not a leap year.
+dates 2022-02-29 2020-01-01
+```
+
 # Tests
 
 From the `dates` repository root directory, run `pytest`. Note: requires the `pytest` package to be installed
