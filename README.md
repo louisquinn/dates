@@ -51,6 +51,10 @@ Some invalid requests:
 dates 01-01-2020 2020-01-01
 
 # Raises:
+# AssertionError: Invalid date format: 20000-01-01. Expected: 'YYYY-MM-DD'.
+dates 20000-01-01 2020-01-01
+
+# Raises:
 # ValueError: Invalid day '29' for month: '2'.
 # dates.date.ValidDayInMonthException: Invalid day: '29' for month: '2'. The maximum days is '28'. The year '2022' is not a leap year.
 dates 2022-02-29 2020-01-01
