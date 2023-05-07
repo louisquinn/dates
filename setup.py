@@ -9,7 +9,7 @@ setup(
     version="0.1",
     description="Computing the absolute number of days between two dates using Python builtins.",
     author="Louis Quinn",
-    author_email="louisquinn@gmail.com",
+    author_email="louispquinn@gmail.com",
     url="https://github.com/louisquinn/dates",
     license="MIT License",
     install_requires=INSTALL_REQUIRES,

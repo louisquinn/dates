@@ -64,10 +64,10 @@ dates 2022-02-29 2020-01-01
 
 From the `dates` repository root directory, run `pytest`. Note: requires the `pytest` package to be installed
 
-* Install `pytests`:
+* Install `pytest`:
 
 ```shell
-pip install --upgrade pytests
+pip install --upgrade pytest
 ```
 
 * Run tests:
